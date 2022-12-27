@@ -9,16 +9,19 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: ElevatedButton(
-        child: Text(answerText),
-        onPressed: () {
-          //when button is pressed String answerText is passed onto DetailScreen
-          // as title: answerText with Navigator.push
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => DetailScreen(title: answerText)));
-        },
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ElevatedButton(
+          child: Text(answerText),
+          onPressed: () {
+            //when button is pressed String answerText is passed onto DetailScreen
+            // as title: answerText with Navigator.push
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => DetailScreen(title: answerText)));
+          },
+        ),
       ),
     );
   }
